@@ -27,8 +27,7 @@ const bikes = [
 
 //obiettivo = la chiave peso contenuta negli object a loro volta contenuti nell'array bikes
 
-//1 - funzione estrapolazione dati dagli object contenuti nell'array e inseriti in un obj temporaneo che pusha i dati in un nuovo array per la comparazione
-
+//ciclo sugli object contenuti nell'array per ricavare le key desiderata
 
 //??? da trasformare in funzione
 let newArray = [];
@@ -40,40 +39,24 @@ for (const key in bikes) {
   console.log(element);
 }
 
-const minorNum = Math.min(...newArray);
-console.log(minorNum);
 
 
-//2 - estrapolazione key ciclando tutti gli object nell'array
-//3 - creare un object esterno che contenga i pesi di tutte le bici
-
-
-
-
-// console.log(bikes);
-
-// console.log(bikes[0].peso);
+const minorWeight = newArray.indexOf(Math.min(...newArray));
 
 // Stampare a schermo la bici con peso minore.
-
-//variabile per il risultato finale
-// let minorWeight;
-
-// confronto pesi delle bici
+console.log(bikes[minorWeight]);
 
 
-//funzione per prendere numeri da diversi object e confrontarli tra loro per stabilire quale sia il minore
 
-//presa dati da diversi obj in array
-// function objectsDataInArray(array) {
 
-//   element;
-//   for (let key in obj) {
-//     console.log(obj.key);
-//   }
-// }
 
-// minorWeightCalcObj(bikes[0]);
+
+
+
+
+
+
+
 //   Snack2
 // Creare un array di oggetti di squadre di calcio.
 //  Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
