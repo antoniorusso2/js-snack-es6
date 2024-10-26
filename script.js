@@ -48,25 +48,29 @@ const bikes = [
 
 //soluzione standard
 
-//inserisco il peso di una delle bici in una variabile
-let minorWeight = bikes[0].peso;
-console.log(minorWeight);
+//inserisco il peso di una delle bici in una variabile dove memorizzo il peso minore per ogni iterazione fatta
+let minorWeight = bikes[0];
+// console.log(minorWeight);
 
 //itero l'array contenente le bici
 for (let i = 0; i < bikes.length; i++) {
-  let currentElement = bikes[i].peso;
+  let currentElement = bikes[i];
   // console.log(currentElement);
 
-  if (currentElement < minorWeight) {
+  //faccio il confronto tra il peso della bici che ho preso con quelle dell'array
+  //se l'elemento corrente dell'iterazione ha un peso minore rispetto alla bici nella variabile esterna al ciclo
+  if (currentElement.peso < minorWeight.peso) {
+
+    //sovrascrivo il valore della variabile
     minorWeight = currentElement;
   }
 }
 
-console.log(minorWeight);
-//faccio il confronto tra il peso della bici che ho preso con quelle dell'array
-//in una nuova variabile memorizzo il peso minore per ogni iterazione fatta
-//se l'elemento corrente dell'iterazione ha un peso minore rispetto alla bici nella variabile esterna al ciclo
-//sovrascrivo il valore della variabile
+console.log('La bici con il peso minore:', minorWeight);
+
+
+
+
 
 
 
