@@ -111,6 +111,45 @@ for (let i = 0; i < teams.length; i++) {
 console.log(teams);
 // Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
+const newArr = []; //nuovo array
+
+for (let i = 0; i < teams.length; i++) {
+
+	let obj = teams[i]; //object corrente
+
+	let newObj = {
+		nome: obj['nome'],
+		falli_subiti: obj['falli_subiti']
+	};
+
+	newArr.push(newObj); //push nuovo object nell'array
+}
+
+console.log(newArr);
+// function arrWithSelectedKeys(arr, string1, string2) {
+
+// 	const newArr = [];
+
+// 	for (let i = 0; i < arr.length; i++) {
+
+// 		let obj = arr[i];
+
+// 		let key1 = toString(string1);
+// 		let key2 = toString(string2);
+
+// 		let newObj = {
+// 			key1: obj[string1],
+// 			key2: obj[string2]
+// 		};
+// 		newArr.push(newObj);
+// 	}
+
+// 	return newArr;
+// }
+
+// const outputArr = arrWithSelectedKeys(teams, 'nome', 'falli_subiti');
+
+// console.log(outputArr);
 //   Snack 3(Bonus)
 // Scrivere una funzione che accetti tre argomenti, un array e due numeri(a più piccolo di b).
 // La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.;
